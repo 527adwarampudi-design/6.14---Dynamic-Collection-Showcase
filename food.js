@@ -126,6 +126,89 @@ image: "https://placehold.co/300x300",
 region: "East India",
 detail: "Spicy curry made from yellow peas, popular in street stalls of Kolkata.",
 }
+
+
+{
+name: "Butter Chicken",
+type: "Meal",
+image: "https://placehold.co/300x300",
+region: "North India",
+detail: "Creamy tomato-based curry with tender chicken pieces.",
+}
+
+{
+name: "Palak Paneer",
+type: "Meal",
+image: "https://placehold.co/300x300",
+region: "North India",
+detail: "Creamy spinach-based curry with paneer cubes.",
+}
+
+{
+name: "Naan",
+type: "Snack",
+image: "https://placehold.co/300x300",
+region: "North India",
+detail: "Soft, fluffy flatbread often served with curries.",
+}
+
+{
+name: "Samosa",
+type: "Snack",
+image: "https://placehold.co/300x300",
+region: "North India",
+detail: "Triangular fried pastry filled with spiced potatoes and peas.",
+}
+
+{
+name: "Gulab Jamun",
+type: "Dessert",
+image: "https://placehold.co/300x300",
+region: "North India",
+detail: "Soft, spongy dessert made from milk solids and soaked in sugar syrup.",
+}
+
+{
+name: "Kheer",
+type: "Dessert",
+image: "https://placehold.co/300x300",
+region: "North India",
+detail: "Creamy rice pudding sweetened with sugar and cardamom.",
+}
+
+{
+name: "Uttapam",
+type: "Meal",
+image: "https://placehold.co/300x300",
+region: "South India",
+detail: "Flatbread topped with spicy vegetables.",
+}
+
+{
+name: "Idiyappam",
+type: "Meal",
+image: "https://placehold.co/300x300",
+region: "South India",
+detail: " Steamed rice flour noodles pressed into thin vermicelli-like nests, often paired with spicy curries or sweetened coconut milk",
+}
+
+{
+name: "Bisi Bele Bath",
+type: "Meal",
+image: "https://placehold.co/300x300",
+region: "South India",
+detail: " A popular spicy rice and lentil dish from Karnataka mixed with vegetables and a special blend of spices.",
+}
+
+{
+name: "Bisi Bele Bath",
+type: "Meal",
+image: "https://placehold.co/300x300",
+region: "South India",
+detail: " A popular spicy rice and lentil dish from Karnataka mixed with vegetables and a special blend of spices.",
+}
+
+
 ];
 function render(list){
     const container = document.getElementById("card-container");
