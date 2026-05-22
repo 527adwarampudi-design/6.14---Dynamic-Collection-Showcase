@@ -1,127 +1,185 @@
+/* --- Global Theme & Palette Configurations --- */
+/* The :root selector targets the highest level of the document, making these variables available globally */
+:root {
+  --deep-red: #C0392B;        /* Creates a reusable color variable for primary accents like buttons and borders */
+  --warm-yellow: #F4D03F;     /* Creates a reusable color variable for secondary accents and highlights */
+  --cream: #FFF8E1;           /* Creates a reusable color variable for warm light backgrounds */
+  --dark-brown: #4E342E;      /* Creates a reusable color variable for primary text and dark elements */
+  --wf-sand: #FBF3E6;         /* Creates a reusable color variable for secondary soft off-white backgrounds */
+}
 
-
+/* Base styles applied to the entire page structure */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--cream);
-  color: var(--dark-brown);
+  font-family: 'Poppins', sans-serif; /* Sets the default clean geometric font for all body text */
+  color: var(--dark-brown);           /* Applies the dark brown variable as the default text color */
+  min-height: 100vh;                  /* Forces the body to take up at least 100% of the screen height */
+  display: flex;                      /* Turns the body into a flexbox container to control layout direction */
+  flex-direction: column;             /* Stacks content vertically (Header -> Main -> Footer) */
 }
 
+/* Grouped selector targeting all heading levels and the branding link */
 h1, h2, h3, .navbar-brand {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif; /* Applies the elegant serif font to editorial headers */
 }
 
-/* --- Navigation Tuning --- */
+/* --- Page-Specific Canvas Signatures --- */
+/* Custom body classes used to swap background colors depending on which page is open */
+.body-home { background-color: var(--cream); }       /* Sets a warm cream background specifically for index.html */
+.body-about { background-color: var(--wf-sand); }     /* Sets a soft sand background specifically for about.html */
+.body-showcase { background-color: #f6f0e2; }        /* Sets a neutral tan-gray background specifically for showcase.html */
+
+/* --- Header & Layout Components --- */
+/* Custom navigation bar styling */
 .navbar-custom {
-  background-color: var(--dark-brown) !important;
-  border-bottom: 4px solid var(--deep-red);
+  background-color: var(--dark-brown) !important;    /* Forces the navigation bar background to be dark brown */
+  border-bottom: 4px solid var(--deep-red);          /* Adds a thick decorative red line under the navigation bar */
 }
-
-.navbar-custom .navbar-brand, 
+/* Navigation bar logo link */
+.navbar-custom .navbar-brand { 
+  color: #ffffff !important;                         /* Forces the brand text color to be pure white */
+}
+/* Default state for navigation links */
 .navbar-custom .nav-link {
-  color: #ffffff !important;
-  transition: color 0.2s ease;
+  color: rgba(255, 255, 255, 0.85) !important;       /* Sets links to a slightly transparent white for a soft look */
+  transition: all 0.2s ease;                         /* Smooths out the color shift animation when hovering over links */
+}
+/* Combined state for when a link is hovered over or actively selected */
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: var(--warm-yellow) !important;              /* Shifts the link text color to warm yellow */
 }
 
-.navbar-custom .nav-link.active,
-.navbar-custom .nav-link:hover {
-  color: var(--warm-yellow) !important;
-}
-
-/* --- Hero Banner Structural Definitions --- */
+/* Large showcase banner box used at the top of the home page */
 .hero-header-box {
+  /* Blends an overlay tint gradient on top of a background image of Indian food */
   background: linear-gradient(rgba(78, 52, 46, 0.85), rgba(78, 52, 46, 0.95)),
               url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
-  color: var(--cream);
-  padding: 5rem 1rem;
-  border-bottom: 5px solid var(--warm-yellow);
+  color: var(--cream);                               /* Sets the text inside the hero banner to warm cream */
+  padding: 6rem 1rem;                                /* Adds large padding on top/bottom and slight padding on sides */
+  border-bottom: 5px solid var(--warm-yellow);       /* Adds a thick decorative gold border to the bottom of the banner */
 }
 
-/* --- Functional Filter Controls Typography/Color Elements --- */
+/* Limits paragraph widths within the hero section */
+.hero-description {
+  max-width: 600px;                                  /* Prevents the description text from stretching too wide on wide screens */
+}
+
+/* --- Section Dividers --- */
+/* Decorative accent line used under major headings */
+.heading-divider {
+  background-color: var(--deep-red);                 /* Colors the divider line deep red */
+  height: 4px;                                       /* Sets the thickness of the horizontal line */
+  width: 80px;                                       /* Restricts how wide the line stretches horizontally */
+}
+
+/* --- Interactive Dashboard Categories --- */
+/* Category selection cards on the home page dashboard */
+.food-cat-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Prepares smooth transition speeds for movement and shadow changes */
+}
+/* Triggered state when a user hovers over a category block */
+.food-cat-card:hover {
+  transform: scale(1.04);                            /* Slightly expands the card size by 4% to create depth */
+  box-shadow: 0 8px 16px rgba(78, 52, 46, 0.12) !important; /* Drops a soft brown shadow underneath the card */
+}
+
+/* --- Filter & Action Buttons --- */
+/* Solid color button styling state */
 .btn-primary-custom {
-  background-color: var(--deep-red) !important;
-  color: #ffffff !important;
-  border: 2px solid var(--deep-red) !important;
+  background-color: var(--deep-red) !important;      /* Paints the main button fill deep red */
+  color: #ffffff !important;                         /* Makes the text inside the button white */
+  border: 2px solid var(--deep-red) !important;      /* Outlines the button with a matching red border */
 }
-
+/* Unselected or secondary outline button styling state */
 .btn-outline-primary-custom {
-  background-color: transparent !important;
-  color: var(--deep-red) !important;
-  border: 2px solid var(--deep-red) !important;
+  background-color: transparent !important;          /* Keeps the inside background clear */
+  color: var(--deep-red) !important;                 /* Colors the label text deep red */
+  border: 2px solid var(--deep-red) !important;      /* Outlines the button with a solid red border */
 }
-
+/* Hover effect for outline buttons */
 .btn-outline-primary-custom:hover {
-  background-color: var(--deep-red) !important;
-  color: #ffffff !important;
+  background-color: var(--deep-red) !important;      /* Fills the background with red when hovered over */
+  color: #ffffff !important;                         /* Inverts the text label to white */
 }
-
-/* --- Card Architecture & Transform Properties --- */
-.food-card {
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-  background-color: #ffffff;
-}
-
-.food-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(78, 52, 46, 0.15) !important;
-}
-
-.food-card-img {
-  height: 190px;
-  object-fit: cover;
-}
-
-.style-type-tag {
-  font-size: 0.7rem;
-  letter-spacing: 0.5px;
-}
-
+/* Dark accent button style used for "More Info" triggers */
 .btn-custom-action {
-  background-color: var(--dark-brown);
-  color: #ffffff;
-  border: none;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
+  background-color: var(--dark-brown);               /* Sets background fill to dark brown */
+  color: #ffffff;                                    /* Sets text color to white */
+  border: none;                                      /* Disables the default browser outer border outline */
+  transition: background-color 0.2s ease;            /* Smooths out color changes when hovered */
+}
+/* Hover effect for action buttons */
+.btn-custom-action:hover { 
+  background-color: var(--deep-red);                 /* Swaps the button color to deep red on hover */
 }
 
-.btn-custom-action:hover {
-  background-color: var(--deep-red);
-  color: #ffffff;
+/* --- Card Architecture & Badges --- */
+/* Structural style for food recipe item grids */
+.food-card {
+  border-radius: 12px;                               /* Rounds off all four corners of the item card */
+  overflow: hidden;                                  /* Clips inside content (like images) to respect the rounded corners */
+  /* Smoothly animates card lift using a playful "bounce" curve (cubic-bezier) */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  background-color: #ffffff;                         /* Sets a clean white background for the card body */
+}
+/* Hover effect for grid item cards */
+.food-card:hover {
+  transform: translateY(-8px);                       /* Lifts the card upwards by 8 pixels */
+  box-shadow: 0 12px 24px rgba(78, 52, 46, 0.15) !important; /* Renders a deep, realistic shadow underneath */
+}
+/* Keeps thumbnail proportions consistent */
+.food-card-img { 
+  height: 190px;                                     /* Sets a fixed height for all item thumbnail pictures */
+  object-fit: cover;                                 /* Forces image to scale crop cleanly without warping or stretching */
+}
+/* Small data taxonomy tags (e.g., "SNACK", "MEAL") */
+.style-type-tag { 
+  font-size: 0.7rem;                                 /* Shrinks the badge text down slightly */
+  letter-spacing: 0.5px;                             /* Widens horizontal tracking space between characters */
 }
 
-/* --- Conditional Class Rules Injected By JavaScript Loops --- */
-.spicy-card-highlight {
-  border: 2px solid var(--deep-red) !important;
+/* Special glowing red border added dynamically via JavaScript if an item is labeled spicy */
+.spicy-card-highlight { 
+  border: 2px solid var(--deep-red) !important;      /* Enforces a solid crimson frame around the card */
 }
-
+/* Keyframe engine declaration for drawing standard animations */
 @keyframes pulseEffect {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0%, 100% { transform: scale(1); }                  /* Keeps the item at normal scale at the start and end of the loop */
+  50% { transform: scale(1.05); }                    /* Inflates the item up by 5% right in the middle of the loop */
+}
+/* Class that assigns the pulsing animation loop to an element */
+.animate-pulse { 
+  animation: pulseEffect 2s infinite ease-in-out;    /* Runs the pulse effect endlessly over a smooth 2-second rhythm */
 }
 
-.animate-pulse {
-  animation: pulseEffect 2s infinite ease-in-out;
+/* --- Modal Visual Styling --- */
+/* Main popup content window container */
+.modal-content-custom { 
+  border-radius: 16px;                               /* Curvatures the corners of the popup modal wrapper */
+  border: none;                                      /* Removes default system border outlines */
+  background-color: var(--wf-sand);                  /* Fills background canvas color with soft sand */
+}
+/* Handles proportions for the popup image view */
+.modal-img-frame { 
+  max-height: 280px;                                 /* Caps height expansion to prevent the image from pushing content off screen */
+  width: 100%;                                       /* Forces the width to stretch fully to fill the layout bounds */
+  object-fit: cover;                                 /* Crops image cleanly inside bounding frame values */
+  border-radius: 8px;                                /* Rounds the corners of the inner photo asset */
+}
+/* Layout control column inside modal data rows */
+.modal-label-col { 
+  width: 110px;                                      /* Locks the label column width so values align perfectly */
+}
+/* Stylized quotation block for the recipe item description description text */
+.modal-detail-box {
+  background-color: var(--cream);                    /* Gives descriptions a warm background fill */
+  border-left: 4px solid var(--deep-red);            /* Places a thick crimson accent highlight bar on the left side */
 }
 
-/* --- Modal Visual Enhancements --- */
-.modal-content-custom {
-  border-radius: 16px;
-  border: none;
-  background-color: var(--wf-sand);
-}
-
-.modal-img-frame {
-  max-height: 280px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* --- Footnotes Layout Matrix --- */
-footer-custom {
-  background-color: var(--dark-brown);
-  color: var(--cream);
-  border-top: 4px solid var(--deep-red);
+/* --- Footer --- */
+/* Main page footer anchor base */
+footer {
+  background-color: var(--dark-brown);               /* Colors footer canvas background dark brown */
+  color: rgba(255, 255, 255, 0.6);                   /* Makes text content a soft, slightly translucent white */
+  border-top: 4px solid var(--deep-red);             /* Caps off the top of the footer with a decorative crimson accent line */
 }

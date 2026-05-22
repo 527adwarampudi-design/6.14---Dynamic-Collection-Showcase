@@ -4,21 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Masalaora</title>
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-  <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+<body class="body-home"> <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold fs-3" href="index.html">Masalaora</a>
+      <a class="navbar-brand fw-bold fs-3" href="index.html"> Masalaora</a>
+      
       <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navContainerElement">
-        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-      </button>
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span> </button>
+      
       <div class="collapse navbar-collapse" id="navContainerElement">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium"> <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="showcase.html">Showcase</a></li>
         </ul>
@@ -30,7 +29,7 @@
     <div class="container py-3">
       <span class="text-uppercase tracking-wider fw-bold text-warning mb-2 d-inline-block">Explore The</span>
       <h1 class="display-3 fw-extrabold mb-3 text-white">FLAVORS OF INDIA</h1>
-      <p class="lead mx-auto mb-4 opacity-90" style="max-width: 600px;">
+      <p class="lead mx-auto mb-4 opacity-90 hero-description">
         A journey through India's most loved dishes. Discover local histories, specific flavor dynamics, and authentic spices from across five traditional regions.
       </p>
       <a href="showcase.html" class="btn btn-primary-custom btn-lg rounded-pill px-5 py-2 shadow-sm fw-medium">VIEW COLLECTION</a>
@@ -39,53 +38,53 @@
 
   <section class="container py-5 text-center">
     <h2 class="fw-bold mb-4">Explore by Category</h2>
-    <div class="row g-4 justify-content-center">
-      <div class="col-6 col-md-3">
-        <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4 border-danger">
-          <h3 class="h5 fw-bold text-dark mb-1">North India</h3>
-        </div>
+    <div class="row g-4 justify-content-center"> <div class="col-6 col-md-3"> <a href="showcase.html?region=North India" class="text-decoration-none">
+          <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4 border-danger food-cat-card"> <h3 class="h5 fw-bold text-dark mb-1">North India</h3>
+          </div>
+        </a>
       </div>
+
       <div class="col-6 col-md-3">
-        <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4 border-warning">
-          <h3 class="h5 fw-bold text-dark mb-1">South India</h3>
-        </div>
+        <a href="showcase.html?region=South India" class="text-decoration-none">
+          <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4 border-warning food-cat-card">
+            <h3 class="h5 fw-bold text-dark mb-1">South India</h3>
+          </div>
+        </a>
       </div>
+
       <div class="col-6 col-md-3">
-        <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4 border-success">
-          <h3 class="h5 fw-bold text-dark mb-1">Street Food</h3>
-        </div>
+        <a href="showcase.html?region=West India" class="text-decoration-none">
+          <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4 border-success food-cat-card">
+            <h3 class="h5 fw-bold text-dark mb-1">West India</h3>
+          </div>
+        </a>
       </div>
+
       <div class="col-6 col-md-3">
-        <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4 border-primary">
-          <h3 class="h5 fw-bold text-dark mb-1">Desserts</h3>
-        </div>
+        <a href="showcase.html?region=East India" class="text-decoration-none">
+          <div class="p-4 bg-white shadow-sm rounded-4 border-bottom border-4 border-primary food-cat-card">
+            <h3 class="h5 fw-bold text-dark mb-1">East India</h3>
+          </div>
+        </a>
       </div>
+      
     </div>
   </section>
 
   <main class="bg-white py-5 border-top border-light">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-md-5">
+      <div class="row align-items-center g-5"> <div class="col-md-5">
           <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600&auto=format&fit=crop" class="img-fluid rounded-4 shadow" alt="Indian Spice presentation tray">
         </div>
         <div class="col-md-7">
           <h2 class="display-5 fw-bold mb-3">A Taste of India</h2>
-          <p class="lead text-muted">
-            Indian cuisine is a beautiful blend of tradition, culture, and spices. Each region has its own unique flavors and stories. Let's explore them together!
-          </p>
-          <p class="text-secondary">
-            From the fiery chaat stalls of Mumbai to the steaming idli stands along Chennai's shores, our interactive portal catalogs verified local assets programmatically to give you instant insight into global cooking styles.
-          </p>
+          <p class="lead text-muted">Indian cuisine is a beautiful blend of tradition, culture, and spices. Each region has its own unique flavors and stories.</p>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="bg-dark text-white-50 text-center py-4 mt-auto">
-    <div class="container">
-      <p class="mb-0">&copy; 2026 Flavors of India. Handcrafted dynamically.</p>
-    </div>
+  <footer class="text-center py-4 mt-auto"> <div class="container"><p class="mb-0">&copy; 2026 Masalaora. Handcrafted dynamically.</p></div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
