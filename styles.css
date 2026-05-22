@@ -1,38 +1,127 @@
-body{
-    
-background-color: #B87333;
 
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cream);
+  color: var(--dark-brown);
 }
 
-.card {
-  border: none;
-  border-radius: 20px;
+h1, h2, h3, .navbar-brand {
+  font-family: 'Playfair Display', serif;
+}
+
+/* --- Navigation Tuning --- */
+.navbar-custom {
+  background-color: var(--dark-brown) !important;
+  border-bottom: 4px solid var(--deep-red);
+}
+
+.navbar-custom .navbar-brand, 
+.navbar-custom .nav-link {
+  color: #ffffff !important;
+  transition: color 0.2s ease;
+}
+
+.navbar-custom .nav-link.active,
+.navbar-custom .nav-link:hover {
+  color: var(--warm-yellow) !important;
+}
+
+/* --- Hero Banner Structural Definitions --- */
+.hero-header-box {
+  background: linear-gradient(rgba(78, 52, 46, 0.85), rgba(78, 52, 46, 0.95)),
+              url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+  color: var(--cream);
+  padding: 5rem 1rem;
+  border-bottom: 5px solid var(--warm-yellow);
+}
+
+/* --- Functional Filter Controls Typography/Color Elements --- */
+.btn-primary-custom {
+  background-color: var(--deep-red) !important;
+  color: #ffffff !important;
+  border: 2px solid var(--deep-red) !important;
+}
+
+.btn-outline-primary-custom {
+  background-color: transparent !important;
+  color: var(--deep-red) !important;
+  border: 2px solid var(--deep-red) !important;
+}
+
+.btn-outline-primary-custom:hover {
+  background-color: var(--deep-red) !important;
+  color: #ffffff !important;
+}
+
+/* --- Card Architecture & Transform Properties --- */
+.food-card {
+  border-radius: 12px;
   overflow: hidden;
-  transition: 0.3s;
-  background-color: #fff8f0;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  background-color: #ffffff;
 }
 
-.card:hover {
+.food-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(78, 52, 46, 0.15) !important;
 }
 
-.hero-title {
-  font-size: 5rem;
-  font-weight: bold;
-  color: #fff8f0;
+.food-card-img {
+  height: 190px;
+  object-fit: cover;
 }
 
-.filter-btn {
-  background-color: #e07a24;
+.style-type-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-custom-action {
+  background-color: var(--dark-brown);
+  color: #ffffff;
   border: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  margin: 5px;
-  transition: 0.3s;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 }
 
-.filter-btn:hover {
-  background-color: #b23a2b;
+.btn-custom-action:hover {
+  background-color: var(--deep-red);
+  color: #ffffff;
 }
 
+/* --- Conditional Class Rules Injected By JavaScript Loops --- */
+.spicy-card-highlight {
+  border: 2px solid var(--deep-red) !important;
+}
+
+@keyframes pulseEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-pulse {
+  animation: pulseEffect 2s infinite ease-in-out;
+}
+
+/* --- Modal Visual Enhancements --- */
+.modal-content-custom {
+  border-radius: 16px;
+  border: none;
+  background-color: var(--wf-sand);
+}
+
+.modal-img-frame {
+  max-height: 280px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* --- Footnotes Layout Matrix --- */
+footer-custom {
+  background-color: var(--dark-brown);
+  color: var(--cream);
+  border-top: 4px solid var(--deep-red);
+}
